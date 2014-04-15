@@ -29,6 +29,19 @@ function fizzbuzzGenerator () {
     }
   };
   /*End Tests*/
+  // for (name in arguments) {
+  //     alert("this[" + name + "]=" + this[name]);
+  // }
+  // console.log(arguments);
+  // alert(arguments);
+  reveal(fizzbuzz, [
+    'isDivisibleByFifteen',
+    'isDivisibleByFive',
+    'isDivisibleByThree']
+  );
+  console.log(fizzbuzz._test)
+  console.log(isDivisibleByFive)
+
 
   return fizzbuzz;
  }
