@@ -28,21 +28,21 @@ function fizzbuzzGenerator () {
       isDivisibleByFifteen: isDivisibleByFifteen
     }
   };
-  /*End Tests*/
-  // for (name in arguments) {
-  //     alert("this[" + name + "]=" + this[name]);
-  // }
-  // console.log(arguments);
-  // alert(arguments);
 
+  function reveal (host, parasites) {
+    revealed = {};
+    for (index in parasites) {
+      var name = parasites[index];
+      revealed[name] = eval(name);
+    }
+    host._test = revealed
+  }
 
-  // reveal(fizzbuzz, [
-  //   'isDivisibleByFifteen',
-  //   'isDivisibleByFive',
-  //   'isDivisibleByThree']
-  // );
-
-
+  reveal(fizzbuzz, [
+    'isDivisibleByFifteen',
+    'isDivisibleByFive',
+    'isDivisibleByThree']
+  );
 
   return fizzbuzz;
  }
